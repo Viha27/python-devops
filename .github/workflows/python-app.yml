@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f req.txt ]; then pip install -r req.txt; fi
+        install -r req.txt
 
     - name: Test with pytest
       run: |
