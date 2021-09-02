@@ -1,2 +1,6 @@
 __pycache__
+<<<<<<< HEAD
 .pytest_cache
+=======
+.pytest_cache
+>>>>>>> d15566e2445e76e3d2c887e22a6360f243a7b094
