@@ -10,8 +10,12 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-
+    
+    
+    strategy:
+      matrix:
+        platform: [ubuntu-latest,widows-latest,macos-latest]
+    runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
