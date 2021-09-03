@@ -29,9 +29,12 @@ jobs:
     - name: Check docker installed or not
       run: docker run hello-world  
     - name: Push to docker hub
-      uses: docker/build-push-action@v2
+      uses: docker/build-push-action@v1
       with:
-        push: viha27/devopspython_27
+        username: ${{secrets.DOCKERUSERNAME}}
+        password: ${{secrets.DOCKERPASSWORD}}
+        repository: viha27/devopspython_27
+        tag_with_ref: true
       
     - name: Test with pytest
       run: |
